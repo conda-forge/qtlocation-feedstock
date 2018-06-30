@@ -16,14 +16,16 @@ the data available from some of the popular location services.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/qtlocation-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/qtlocation-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/qtlocation-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/qtlocation-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/qtlocation-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/qtlocation-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/qtlocation-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/qtlocation-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/qtlocation-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/qtlocation-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/qtlocation-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/qtlocation-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qtlocation/badges/version.svg)](https://anaconda.org/conda-forge/qtlocation)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/qtlocation/badges/downloads.svg)](https://anaconda.org/conda-forge/qtlocation)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-qtlocation-green.svg)](https://anaconda.org/conda-forge/qtlocation) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/qtlocation.svg)](https://anaconda.org/conda-forge/qtlocation) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qtlocation.svg)](https://anaconda.org/conda-forge/qtlocation) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/qtlocation.svg)](https://anaconda.org/conda-forge/qtlocation) |
 
 Installing qtlocation
 =====================
