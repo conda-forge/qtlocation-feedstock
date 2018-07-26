@@ -13,11 +13,11 @@ source:
 
 build:
   # Skip py35 since py36 is built and uses same vc14
-  number: 1
+  number: 2
 
 requirements:
   build:
-    - perl 5.20.3.1  # avoid making a matrix of perl builds
+    - perl  # avoid making a matrix of perl builds
     - jom  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
