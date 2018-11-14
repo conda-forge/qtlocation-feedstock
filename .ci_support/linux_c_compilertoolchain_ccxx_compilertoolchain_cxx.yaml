@@ -1,11 +1,15 @@
+build_number_decrement:
+- '1000'
 c_compiler:
-- vs2015
+- toolchain_c
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2015
+- toolchain_cxx
+docker_image:
+- condaforge/linux-anvil
 pin_run_as_build:
   qt:
     max_pin: x.x
@@ -14,3 +18,7 @@ qt:
 zip_keys:
 - - c_compiler
   - cxx_compiler
+  - channel_sources
+  - channel_targets
+  - docker_image
+  - build_number_decrement
