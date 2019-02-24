@@ -17,7 +17,7 @@ build:
 
 requirements:
   build:
-    - perl 5.20.3.1  # avoid making a matrix of perl builds
+    - perl
     - jom  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
