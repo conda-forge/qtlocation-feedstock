@@ -7,8 +7,6 @@ cd build/
 # in qt mkspecs referencing "qt_1548879054661"
 # https://github.com/conda-forge/qtlocation-feedstock/pull/3#issuecomment-466278804
 qmake \
-    QMAKE_LIBDIR=/usr/lib64 \
-    QMAKE_INCDIR=/usr/include \
     QMAKE_CC=${CC} \
     QMAKE_CXX=${CXX} \
     QMAKE_LINK=${CXX} \
@@ -28,8 +26,6 @@ mkdir -p examples
 cd examples/
 
 qmake \
-    QMAKE_LIBDIR=/usr/lib64 \
-    QMAKE_INCDIR=/usr/include \
     QMAKE_CC=${CC} \
     QMAKE_CXX=${CXX} \
     QMAKE_LINK=${CXX} \
