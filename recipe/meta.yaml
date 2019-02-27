@@ -13,14 +13,21 @@ source:
 
 build:
   # Skip py35 since py36 is built and uses same vc14
-  number: 1
+  number: 1001
 
 requirements:
   build:
-    - perl 5.20.3.1  # avoid making a matrix of perl builds
+    - perl
     - jom  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    # The CDT packages below are those used in qt-feedstock
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libxfixes') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux]
   host:
     - qt
   run:
@@ -50,3 +57,4 @@ about:
 extra:
   recipe-maintainers:
     - ceholden
+    - gillins
