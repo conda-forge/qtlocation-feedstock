@@ -13,7 +13,7 @@ source:
 
 build:
   # Skip py35 since py36 is built and uses same vc14
-  number: 1001
+  number: 1002
 
 requirements:
   build:
