@@ -9,7 +9,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: http://download.qt.io/official_releases/qt/{{ major_minor }}/{{ version }}/submodules/qtlocation-opensource-src-{{ version }}.tar.gz
+  url: http://download.qt.io/official_releases/qt/{{ major_minor }}/{{ version }}/submodules/qtlocation-opensource-src-{{ version }}.tar.xz
   sha256: {{ sha256 }}
 
 build:
