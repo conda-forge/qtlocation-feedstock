@@ -17,7 +17,3 @@ perl:
 pin_run_as_build:
   perl:
     max_pin: x.x.x
-  qt:
-    max_pin: x.x
-qt:
-- '5.6'
