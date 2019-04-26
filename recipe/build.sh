@@ -3,18 +3,7 @@
 [[ -d build ]] || mkdir build
 cd build/
 
-# Need to specify these QMAKE variables because of build environment residue
-# in qt mkspecs referencing "qt_1548879054661"
-# https://github.com/conda-forge/qtlocation-feedstock/pull/3#issuecomment-466278804
-qmake \
-    QMAKE_CC=${CC} \
-    QMAKE_CXX=${CXX} \
-    QMAKE_LINK=${CXX} \
-    QMAKE_RANLIB=${RANLIB} \
-    QMAKE_OBJDUMP=${OBJDUMP} \
-    QMAKE_STRIP=${STRIP} \
-    QMAKE_AR="${AR} cqs" \
-    ../qtlocation.pro
+qmake ../qtlocation.pro
 
 make -j$CPU_COUNT
 make check
@@ -25,15 +14,7 @@ echo "Building examples to test library install"
 mkdir -p examples
 cd examples/
 
-qmake \
-    QMAKE_CC=${CC} \
-    QMAKE_CXX=${CXX} \
-    QMAKE_LINK=${CXX} \
-    QMAKE_RANLIB=${RANLIB} \
-    QMAKE_OBJDUMP=${OBJDUMP} \
-    QMAKE_STRIP=${STRIP} \
-    QMAKE_AR="${AR} cqs" \
-    ../../examples/examples.pro
+qmake ../../examples/examples.pro
 
 make -j$CPU_COUNT > /dev/null
 make check > /dev/null
