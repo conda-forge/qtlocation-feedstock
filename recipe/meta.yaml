@@ -1,16 +1,13 @@
-{% set name = "qtlocation" %}
 {% set major_minor = "5.9" %}
 {% set version = major_minor + ".7" %}
-{% set sha256 = "82b5b3d7f3f07b3033d3381ea940b6026cda0ec1500f618ea4a15f308cfde652" %}
 
 package:
-  name: {{ name|lower }}
+  name: qtlocation
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: http://download.qt.io/official_releases/qt/{{ major_minor }}/{{ version }}/submodules/qtlocation-opensource-src-{{ version }}.tar.xz
-  sha256: {{ sha256 }}
+  sha256: 82b5b3d7f3f07b3033d3381ea940b6026cda0ec1500f618ea4a15f308cfde652
 
 build:
   number: 0
@@ -36,10 +33,8 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/libQt5Location.so  # [linux]
-    - test -f ${PREFIX}/lib/libQt5Positioning.so  # [linux]
-    - test -f ${PREFIX}/lib/libQt5Location.dylib  # [osx]
-    - test -f ${PREFIX}/lib/libQt5Positioning.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libQt5Location${SHLIB_EXT}  # [not win]
+    - test -f ${PREFIX}/lib/libQt5Positioning${SHLIB_EXT}  # [not win]
     - if not exist %LIBRARY_BIN%\\Qt5Location.dll exit 1  # [win]
     - if not exist %LIBRARY_BIN%\\Qt5Positioning.dll exit 1  # [win]
 
