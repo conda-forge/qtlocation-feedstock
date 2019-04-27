@@ -11,6 +11,11 @@ perl:
 pin_run_as_build:
   perl:
     max_pin: x.x.x
+  vc:
+    max_pin: x
+vc:
+- '14'
 zip_keys:
-- - c_compiler
+- - vc
+  - c_compiler
   - cxx_compiler
