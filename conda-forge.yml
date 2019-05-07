@@ -7,3 +7,7 @@ appveyor:
 compiler_stack: comp7
 max_py_ver: "37"
 max_r_ver: "34"
+provider:
+  osx: azure
+  linux: azure
+  win: azure
