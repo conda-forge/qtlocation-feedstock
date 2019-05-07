@@ -35,8 +35,8 @@ test:
   commands:
     - test -f ${PREFIX}/lib/libQt5Location${SHLIB_EXT}  # [not win]
     - test -f ${PREFIX}/lib/libQt5Positioning${SHLIB_EXT}  # [not win]
-    - if not exist %LIBRARY_BIN%\\Qt5Location.dll exit 1  # [win]
-    - if not exist %LIBRARY_BIN%\\Qt5Positioning.dll exit 1  # [win]
+    - if not exist %LIBRARY_BIN%\\Qt5Location_conda.dll exit 1  # [win]
+    - if not exist %LIBRARY_BIN%\\Qt5Positioning_conda.dll exit 1  # [win]
 
 about:
   home: http://qt-project.org
