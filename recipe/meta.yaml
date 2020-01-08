@@ -12,6 +12,8 @@ source:
 build:
   number: 0
   skip: True  # [win and vc<14]
+  # workaround issues with qt
+  merge_build_host: True   # [linux]
 
 requirements:
   build:
