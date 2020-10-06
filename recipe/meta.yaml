@@ -10,8 +10,7 @@ source:
   sha256: 12c8b59755abc4ca56e135e8ae3db7c6ba1bd95c779060f10a01393ae1040122
 
 build:
-  number: 0
-  skip: True  # [win and vc<14]
+  number: 1
   # workaround issues with qt
   merge_build_host: True   # [linux]
 
