@@ -1,5 +1,5 @@
 {% set major_minor = "5.12" %}
-{% set version = major_minor + ".5" %}
+{% set version = major_minor + ".9" %}
 
 package:
   name: qtlocation
@@ -7,10 +7,10 @@ package:
 
 source:
   url: http://download.qt.io/official_releases/qt/{{ major_minor }}/{{ version }}/submodules/qtlocation-everywhere-src-{{ version }}.tar.xz
-  sha256: 12c8b59755abc4ca56e135e8ae3db7c6ba1bd95c779060f10a01393ae1040122
+  sha256: be31870104af2910690850c4e28bab3ccb76f1aa8deef1e870bcbc6b276aa2c1
 
 build:
-  number: 1
+  number: 0
   # workaround issues with qt
   merge_build_host: True   # [linux]
 
