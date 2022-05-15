@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: http://download.qt.io/official_releases/qt/{{ major_minor }}/{{ version }}/submodules/qtlocation-everywhere-src-{{ version }}.tar.xz
+  url: http://download.qt.io/official_releases/qt/{{ major_minor }}/{{ version }}/submodules/qtlocation-everywhere-opensource-src-{{ version }}.tar.xz
   sha256: a69f28ccfd4ef8e69e0131b178d41d71264be836f2f55bd29731e908a22c6bbd
 
 build:
