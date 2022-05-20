@@ -27,6 +27,7 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxfixes') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
+    - make # [unix]
   host:
     - qt-main {{ version }}
   run:
