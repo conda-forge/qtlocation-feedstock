@@ -30,6 +30,7 @@ requirements:
     - make  # [unix]
   host:
     - qt-main {{ version }}
+    - xorg-libxfixes  # [linux]
   run:
     - qt-main {{ version }}
 
