@@ -27,7 +27,9 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxfixes') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxext') }}     # [linux]
     - make  # [unix]
+    - sysroot_linux-64 2.17  # [linux64]
   host:
     - qt-main {{ version }}
     - xorg-libxfixes  # [linux]
