@@ -1,13 +1,13 @@
-{% set major_minor = "5.12" %}
-{% set version = major_minor + ".9" %}
+{% set major_minor = "5.15" %}
+{% set version = major_minor + ".3" %}
 
 package:
   name: qtlocation
   version: {{ version }}
 
 source:
-  url: http://download.qt.io/official_releases/qt/{{ major_minor }}/{{ version }}/submodules/qtlocation-everywhere-src-{{ version }}.tar.xz
-  sha256: be31870104af2910690850c4e28bab3ccb76f1aa8deef1e870bcbc6b276aa2c1
+  url: http://download.qt.io/official_releases/qt/{{ major_minor }}/{{ version }}/submodules/qtlocation-everywhere-opensource-src-{{ version }}.tar.xz
+  sha256: a69f28ccfd4ef8e69e0131b178d41d71264be836f2f55bd29731e908a22c6bbd
 
 build:
   number: 0
@@ -27,10 +27,14 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxfixes') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxext') }}     # [linux]
+    - make  # [unix]
+    - sysroot_linux-64 2.17  # [linux64]
   host:
-    - qt {{ version }}
+    - qt-main {{ version }}
+    - xorg-libxfixes  # [linux]
   run:
-    - qt {{ version }}
+    - qt-main {{ version }}
 
 test:
   commands:
