@@ -24,7 +24,7 @@ qmake \
     QMAKE_OBJDUMP=${OBJDUMP} \
     QMAKE_STRIP=${STRIP} \
     QMAKE_AR="${AR} cqs" \
-    QMAKE_CXXFLAGS += -std=c++14 \
+    "QMAKE_CXXFLAGS += -std=c++14" \
     ../qtlocation.pro
 make -j$CPU_COUNT
 make check
@@ -43,7 +43,7 @@ qmake \
     QMAKE_OBJDUMP=${OBJDUMP} \
     QMAKE_STRIP=${STRIP} \
     QMAKE_AR="${AR} cqs" \
-    QMAKE_CXXFLAGS += -std=c++14 \
+    "QMAKE_CXXFLAGS += -std=c++14" \
     ../../examples/examples.pro
 
 make -j$CPU_COUNT > /dev/null
